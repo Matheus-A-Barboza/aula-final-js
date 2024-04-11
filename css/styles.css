@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 5%;
+    background-color: black;
+}
+
+.nav-menu{
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link{
+    font-size: 28px;
+}
+
+.spin{
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 15px solid black;
+    border-top: 15px solid red;
+    animation: carregamento 3s linear infinite;
+}
+
+.carroussel{
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    animation: photo 6s infinite alternate-reverse;
+}
+
+.active-section{
+    background-color: rgb(128,128,128,0.455);
+}
+.active-bars{
+    opacity: 1;
+}
+
+.bars{
+    background-color: blue;
+    height: 80px;
+    width: 80px;
+}
+
+section:nth-child(1){
+    height: 100vh;
+}
+
+section:nth-child(2){
+    height: 100vh;
+}
+
+section:nth-child(3){
+    height: 100vh;
+}
+
+aside{
+    position: fixed;
+    left: 0;
+    opacity: 0;
+    top: 0px;
+    width: 300px;
+    height:100%;
+    background-color: black;
+    color: white;
+    transition: 8;
+}
+
+aside > a{
+    color: white;
+    font-size: 32px;
+    padding: 25px 14px;
+    display: block;
+}
+
+
+@keyframes carregamento{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes photo{
+    0%{
+        background-image: url('https://source.unsplash.com/500x500/?hero');
+    }
+    50%{
+        background-image: url('https://source.unsplash.com/500x500/?party');
+    }
+    100%{
+        background-image: url('https://source.unsplash.com/500x500/?beach');
+    }
+}
